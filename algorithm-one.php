@@ -1,9 +1,42 @@
 <?php
 
-// Persegi
-// Segitaiga
-// Piramida
+// Rectangle
+// Triangle
+// Pyramid
 // Fizz Buzz
+// pola
+// polimorphism
+
+function rectangle($height, $width) {
+    for ($i=0; $i < $height; $i++) { 
+        for ($j=0; $j < $width; $j++) { 
+            echo " *";
+        }
+        echo PHP_EOL;
+    }
+}
+
+function triangle($size) {
+    for ($i = 1; $i < $size; $i++) { 
+        for ($j = 1; $j < $i; $j++) {
+            echo " *"; 
+        }
+        echo PHP_EOL;
+    }
+}
+
+function pyramid($size) {
+    for ($i=0; $i < $size; $i++) {
+        for ($j=0; $j < $size - $i; $j++) { 
+            echo " ";
+        }
+        for ($k=0; $k < $i; $k++) { 
+            echo " *";
+        }
+        echo PHP_EOL;
+    }
+}
+
 function fizzBuzz($input)
 {
     for ($i = 1; $i < $input + 1; $i++) {
@@ -47,7 +80,9 @@ function polimorfismWord($input)
 }
 
 
-
+// print(rectangle(10, 10));
+// print(triangle(10));
+print(pyramid(10));
 // print(fizzBuzz(15));
 // print(pola(15));
 // print(polimorfismWord('assa'))
